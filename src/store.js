@@ -7,6 +7,6 @@ const finalCreateStore = compose(
   applyMiddleware(thunk, createLogger())
 )(createStore);
 
-export default function configureStore(initialState = {rdis = []}) {
+export default function configureStore(initialState = {rdi: {}}) {
   return finalCreateStore(rootReducer, initialState);
 }
