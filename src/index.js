@@ -1,38 +1,43 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './store';
 import { Provider } from 'react-redux';
 
 const initialState = {
-  rdi: {
-    kcal: 2700,
-    protein: 70,
-    calcium: 800,
-    iron: 9,
-    magnesium: 375,
-    phosphorus: 700,
-    potassium: 2000,
-    sodium: 2400,
-    zinc: 9,
-    copper: 1,
-    manganese: 2,
-    selenium: 55,
-    fluoride: 3500,
-    vit_c: 80,
-    thiamin: 1.1,
-    riboflavin: 1.4,
-    niacin: 16,
-    panthotenic_acid: 6,
-    vit_b6: 1.4,
-    folate: 200,
-    vit_b12: 2.5,
-    vit_a: 800,
-    vit_e: 12,
-    vit_d: 5,
-    vit_k: 75
-  }
+  app: {
+    menu: false,
+    rdiSettings: true
+  },
+  rdi: [
+    {type: 'kcal',             value: 2700, unit: 'kcal'},
+    {type: 'protein',          value:   70, unit: 'g'},
+    {type: 'calcium',          value:  800, unit: 'mg'},
+    {type: 'iron',             value:    9, unit: 'mg'},
+    {type: 'magnesium',        value:  375, unit: 'mg'},
+    {type: 'phosphorus',       value:  700, unit: 'mg'},
+    {type: 'potassium',        value: 2000, unit: 'mg'},
+    {type: 'sodium',           value: 2400, unit: 'mg'},
+    {type: 'zinc',             value:    9, unit: 'mg'},
+    {type: 'copper',           value:    1, unit: 'mg'},
+    {type: 'manganese',        value:    2, unit: 'mg'},
+    {type: 'selenium',         value:   55, unit: 'µg'},
+    {type: 'fluoride',         value:    3, unit: 'mg'},
+    {type: 'vit_c',            value:   80, unit: 'mg'},
+    {type: 'thiamin',          value:  1.1, unit: 'mg'},
+    {type: 'riboflavin',       value:  1.4, unit: 'mg'},
+    {type: 'niacin',           value:   16, unit: 'mg'},
+    {type: 'panthotenic_acid', value:    6, unit: 'mg'},
+    {type: 'vit_b6',           value:  1.4, unit: 'mg'},
+    {type: 'folate',           value:  200, unit: 'µg'},
+    {type: 'vit_b12',          value:  2.5, unit: 'µg'},
+    {type: 'vit_a',            value:  800, unit: 'µg'},
+    {type: 'vit_e',            value:   12, unit: 'mg'},
+    {type: 'vit_d',            value:    5, unit: 'µg'},
+    {type: 'vit_k',            value:   75, unit: 'µg'},
+  ]
 };
 
 const store = configureStore(initialState);

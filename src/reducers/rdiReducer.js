@@ -5,7 +5,6 @@ export default function rdiReducer(rdi = {}, action) {
         ...rdi,
         kcal: action.payload.value
       };
-      return rdi;
     default:
       return rdi;
   }
